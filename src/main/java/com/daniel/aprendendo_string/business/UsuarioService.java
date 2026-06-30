@@ -20,7 +20,6 @@ public class UsuarioService {
     private final UsuarioRepository repository;
     private final PasswordEncoder passwordEncoder;
 
-
     public Usuario salvaUsuario(Usuario usuario) {
         try{
             emailExiste(usuario.getEmail());
