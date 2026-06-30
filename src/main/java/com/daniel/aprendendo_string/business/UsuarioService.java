@@ -20,7 +20,6 @@ public class UsuarioService {
     private final UsuarioRepository repository;
     private final PasswordEncoder passwordEncoder;
 
-
     public Usuario salvaUsuario(Usuario usuario) {
         try{
             emailExiste(usuario.getEmail());
@@ -29,7 +28,6 @@ public class UsuarioService {
         }catch (ConflictException e){
             throw new ConflictException("Email ja cadastrado " + e.getCause());
         }
-
     }
     public void emailExiste(String email) {
         try{
